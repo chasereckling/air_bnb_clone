@@ -1,1 +1,10 @@
 <h1>Listings Page lol</h1>
+
+
+<% @user.listings.each do |listing| %>
+
+  <%= listing.address %>
+
+<% end %>
+
+<%= link_to "Add Listing", new_user_listing_path %>
