@@ -1,1 +1,7 @@
 <h1>Users Page</h1>
+
+<% @users.each do |user| %>
+  <div>
+    <%= link_to  user.username, user_listings_path(user.id) %>
+  </div>
+<% end %>
