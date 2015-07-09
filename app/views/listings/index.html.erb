@@ -1,10 +1,11 @@
 <h1>Listings Page lol</h1>
-
+<%= image_tag @user.avatar.url %>
 
 <% @user.listings.each do |listing| %>
-
   <%= listing.address %>
-
 <% end %>
 
-<%= link_to "Add Listing", new_user_listing_path %>
+
+<% if current_user == @user %>
+  <%= link_to "Add Listing", new_user_listing_path %>
+<% end %>
